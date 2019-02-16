@@ -1,8 +1,5 @@
 package pplAssignment
-/*
-DONT EDIT THIS CODE. ANOTHER DRIVER WITH SIMILAR STRUCTURE WILL BE USED TO CHECK YOUR CODE
-ONLY CHANGE <Student_ID> to Your ID
-*/
+
 object Driver{
 
   def main(args:Array[String]){
@@ -68,33 +65,33 @@ object Driver{
   }
 
     //Dot product
-    val res1=F2016A7PS0073P.dotProduct(kernel1,kernel2)
+    val res1=main.dotProduct(kernel1,kernel2)
 
     // println(prod)
     //convolution
-    val res2=F2016A7PS0073P.convolute(image,kernel1,imagesize,kernel1size)
+    val res2=main.convolute(image,kernel1,imagesize,kernel1size)
 
     // println(result)
 
     //activation
-    val res3=F2016A7PS0073P.activationLayer((x:Double)=>if(x>150) x else 0,image)
+    val res3=main.activationLayer((x:Double)=>if(x>150) x else 0,image)
 
     // println(result)
 
     //single pooling
 
-    val res4=F2016A7PS0073P.singlePooling(max,poolmat,size)
+    val res4=main.singlePooling(max,poolmat,size)
     //pooling
 
-    val res5=F2016A7PS0073P.poolingLayer(max,image,size) // max is a function
+    val res5=main.poolingLayer(max,image,size) // max is a function
 
     //Normalize
 
-    val res6=F2016A7PS0073P.normalise(nmat)
+    val res6=main.normalise(nmat)
 
     //mixed layer
 
-    val res7=F2016A7PS0073P.mixedLayer(image,kernel1,imagesize,kernel1size,(x:Double)=>x,max,size) // max is a function
+    val res7=main.mixedLayer(image,kernel1,imagesize,kernel1size,(x:Double)=>x,max,size) // max is a function
 
     //assembly layer
     def time[R](block: => R): R = {
@@ -106,8 +103,8 @@ object Driver{
 }
 // THIS COMMENTED SECTION CAN BE REMOVED TO TIME YOUR CODE. TOP LINE AFTER REMOVING THIS WILL BE YOUR TIMED OUTPUT.
 //  COMMENT NEXT LINE WHEN YOU UNCOMMENT THIS
-// val res8=time{F2016A7PS0073P.assembly(image,imagesize,w1,w2,b,kernel1,kernel1size,kernel2,kernel2size,kernel3,kernel3size,size)}
-    val res8=F2016A7PS0073P.assembly(image,imagesize,w1,w2,b,kernel1,kernel1size,kernel2,kernel2size,kernel3,kernel3size,size)
+// val res8=time{main.assembly(image,imagesize,w1,w2,b,kernel1,kernel1size,kernel2,kernel2size,kernel3,kernel3size,size)}
+    val res8=main.assembly(image,imagesize,w1,w2,b,kernel1,kernel1size,kernel2,kernel2size,kernel3,kernel3size,size)
 
     println("res1")
     println(res1)
