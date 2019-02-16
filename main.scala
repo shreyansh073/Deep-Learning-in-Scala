@@ -1,5 +1,5 @@
 package pplAssignment
-object F2016A7PS0073P {
+object main {
   def dotProduct(kernel1:List[List[Double]],kernel2:List[List[Double]]): Double ={
 
     def listProd(l1: List[Double], l2: List[Double], prod:Double): Double ={
