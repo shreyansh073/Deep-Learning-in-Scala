@@ -1,5 +1,5 @@
 package pplAssignment
-object main {
+object _main {
   def dotProduct(kernel1:List[List[Double]],kernel2:List[List[Double]]): Double ={
 
     def listProd(l1: List[Double], l2: List[Double], prod:Double): Double ={
@@ -243,16 +243,6 @@ object main {
     //println(temp1)
     //println("***")
     val temp2 :List[List[Double]]= mixedLayer(image,kernel2,imagesize,kernel2size,(x:Double)=> if(x>0) x else 0,avg,size)
-  //  println(temp2)
-  //  println("***")
-    val temp3 :List[List[Double]]= add(temp1,temp2,w1,w2,b)
-
-    val temp3size:List[Int]= List(getRow(temp3),getCol(temp3))
-
-    val temp4:List[List[Double]] = mixedLayer(temp3,kernel3,temp3size,kernel3size,(x:Double)=> if(x>0) x else 0.5*x,max,size)
-
-    val norm:List[List[Int]]=normalise(temp4)
-
-    norm
+  
   }
 }
